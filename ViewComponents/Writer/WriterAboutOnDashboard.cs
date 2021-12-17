@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebProje.Views.Writer
+namespace WebProje.ViewComponents.Writer
 {
-    public class WriterAboutOnDashboard:ViewComponent
+    public class WriterAboutOnDashboard : ViewComponent
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
         public IViewComponentResult Invoke()
