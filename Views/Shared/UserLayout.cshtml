@@ -44,14 +44,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <header>
         <div class="top-bar_sub_w3layouts container-fluid">
             <div class="row">
-                <div class="col-md-4 logo text-left">
-                    <a class="navbar-brand" href="/Blog/Index/">
-                        <i class="fab fa-linode"> <img src="~/web/images/DİYETİSYEN (2).png"width="150" height="200"  alt=""></i> Tuğba DENİZ
-                       
-                    </a>
-                </div>
-               @await Html.PartialAsync("Partial2")
-                <div class="col-md-4 log-icons text-right">
+
+                @await Html.PartialAsync("Partial2")
+
+                <div class="col-md-12 log-icons text-right">
 
                     <ul class="social_list1 mt-3">
 
@@ -78,6 +74,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="col-md-12 logo text-center">
+                    <a class="navbar-brand" href="/Blog/Index/">
+                        <div align="center"><img src="~/web/images/DİYETİSYEN (2).png" width="350" height="250" alt=""></div>
+
+                    </a>
                 </div>
             </div>
         </div>
