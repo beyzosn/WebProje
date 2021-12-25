@@ -23,19 +23,21 @@
                             </a>
                         </div>
                         <h3>
-                            Tuğba Nur DENİZ Kimdir?
+                            Tuğba Nur Deniz Kimdir?
                         </h3>
                         @foreach (var item in Model)
                         {
                             <p>
-                                @item.AboutDetails1
+                                &nbsp;@item.AboutDetails1
                             </p>
-                            <br />
                             <p>
-                                @item.AboutDetails2
+                                &nbsp;@item.AboutDetails2
+                            </p>
+                            <p>
+                                &nbsp;@item.AboutDetails3
                             </p>
                         }
-                        <a href="single.html" class="btn btn-primary read-m">Read More</a>
+                        
                     </div>
                     
                 </div>
@@ -44,7 +46,7 @@
                 <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
                     <div class="right-blog-info text-left">
                         <div class="tech-btm">
-                            <img src="~/web/images/banner1.jpg" class="img-fluid" alt="">
+                            <img src="~/web/images/sub.jpg" class="img-fluid" alt="">
                         </div>
                         @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
                         @await Html.PartialAsync("~/Views/About/SocialMediaAbout.cshtml")

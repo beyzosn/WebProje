@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,23 +12,20 @@ namespace WebProje.Controllers
 {
     public class NewsLetterController : Controller
     {
-        NewsLetterManager nm = new NewsLetterManager(EfNewsLetterRepository());
-        [HttpGet]
-private static INewsLetterDal EfNewsLetterRepository()
-        {
-            throw new NotImplementedException();
-        }
+        NewsLetterManager nm = new NewsLetterManager(new EfNewsLetterRepository());
 
-        public PartialViewResult SubscribeMail()
+        [HttpGet]
+      
+        public IActionResult SubscribeMail()
         {
             return PartialView();
         }
         [HttpPost]
-        public PartialViewResult SubscribeMail(NewsLetter p)
+        public IActionResult SubscribeMail(NewsLetter p)
         {
             p.MailStatus = true;
             nm.AddNewsLetter(p);
-            return PartialView();
+            return RedirectToAction("Index", "Blog");
         }
     }
 }
