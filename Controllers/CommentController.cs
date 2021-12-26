@@ -22,12 +22,12 @@ namespace WebProje.Controllers
             return PartialView();
         }
         [HttpPost]
-        public IActionResult PartialAddComment(Comment p)
+        public PartialViewResult PartialAddComment(Comment p)
         {
             p.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.CommentStatus = true;
             p.BlogID = 6;
-            return RedirectToAction("Index","Blog");
+            return PartialView(p);
         }
         public PartialViewResult CommentListByBlog(int id)
         {
